@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="800dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:cardBackgroundColor="#2B2A2A">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBottomSheetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/ramona_bold"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:id="@+id/tvBottomSheetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ramona_bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="13dp"
+                />
+
+            <TextView
+                android:id="@+id/tvBottomSheetText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ramona_lite"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="13dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

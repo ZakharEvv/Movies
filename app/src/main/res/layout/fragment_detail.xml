@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#1B1B1B">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подробнее"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ramona_bold"
+        android:textSize="14sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"/>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.DetailFragment"
+        android:background="#1B1B1B">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".UI.DetailFragment">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#A5A5A5"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp">
+
+
+                <ImageView
+                    android:id="@+id/imageViewDetail"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    tools:src="@tools:sample/avatars"
+                    android:adjustViewBounds="true"
+                    android:minHeight="300dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvNameMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ramona_bold"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"/>
+
+            <TextView
+                android:id="@+id/tvYearMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ramona_lite"
+                android:text="description"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnTrailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#4C64FF"
+                    app:cardCornerRadius="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ramona_bold"
+                        android:text="Трейлер"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="14dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/btnAddToFavourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/add_to_favourite"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ramona_bold"
+                android:text="Описание"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/tvDescriptionMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ramona_lite"
+                android:text="Описание"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ramona_bold"
+                android:text="Отзывы"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
