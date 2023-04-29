@@ -1,4 +1,4 @@
-package com.example.movies.ViewModels
+package com.example.movies.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -20,14 +20,6 @@ class  DetailViewModel(application: Application) : AndroidViewModel(application)
     val compositeDisposable = CompositeDisposable()
     var reviews = MutableLiveData<List<Review>>()
     val movieDatabase = MovieDatabase.getInstance(application)
-
-    fun getTrailers() : LiveData<Trailer>{
-        return trailer
-    }
-
-    fun getReviews() : LiveData<List<Review>> {
-        return reviews
-    }
 
     fun getFavouriteMovie(movieId : Int) : LiveData<Movie>{
         return movieDatabase.movieDao().getFavouriteMovie(movieId)
@@ -53,7 +45,7 @@ class  DetailViewModel(application: Application) : AndroidViewModel(application)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 {
-                    trailer.value = it.trailersList.trailers.get(0)
+                    trailer.value = it.trailersList.trailers.first()
                 },
                 { }
             )

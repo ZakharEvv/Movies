@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.movies.UI.MainFragment"
+        android:name="com.example.movies.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.movies.UI.DetailFragment"
+        android:name="com.example.movies.ui.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.movies.UI.FavouriteFragment"
+        android:name="com.example.movies.ui.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" >
         <action
@@ -46,6 +46,6 @@
     </fragment>
     <dialog
         android:id="@+id/modalBottomSheet"
-        android:name="com.example.movies.UI.ModalBottomSheet"
+        android:name="com.example.movies.ui.ModalBottomSheet"
         android:label="ModalBottomSheet" />
 </navigation>

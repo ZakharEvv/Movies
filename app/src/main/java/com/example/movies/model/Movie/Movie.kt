@@ -25,4 +25,4 @@ data class Movie (
     @Embedded
     @SerializedName("rating")
     val rating: Rating
-) : java.io.Serializable{}
+) : java.io.Serializable

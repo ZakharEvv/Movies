@@ -1,13 +1,11 @@
-package com.example.movies.ViewModels
+package com.example.movies.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.example.moviescourse.Database.MovieDatabase
 import com.example.moviescourse.Model.Movie.Movie
 import io.reactivex.rxjava3.disposables.CompositeDisposable
-import io.reactivex.rxjava3.schedulers.Schedulers
 
 class FavouriteViewModel(application: Application) : AndroidViewModel(application) {
 

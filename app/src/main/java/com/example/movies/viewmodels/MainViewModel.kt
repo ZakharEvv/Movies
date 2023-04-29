@@ -1,4 +1,4 @@
-package com.example.movies.ViewModels
+package com.example.movies.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -14,7 +14,7 @@ import io.reactivex.rxjava3.functions.Action
 import io.reactivex.rxjava3.functions.Consumer
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class MainViewModel(application: Application) : AndroidViewModel(application), java.io.Serializable {
 
     var movies = MutableLiveData<List<Movie>>()
     var isLoading = MutableLiveData<Boolean>(false)
@@ -23,14 +23,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         loadMovies()
-    }
-
-    fun getMovies() : LiveData<List<Movie>> {
-        return movies
-    }
-
-    fun getIsLoading() : LiveData<Boolean> {
-        return isLoading
     }
 
     fun loadMovies(){

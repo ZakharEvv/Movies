@@ -22,14 +22,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UI.DetailFragment"
+        tools:context=".ui.DetailFragment"
         android:background="#1B1B1B">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context=".UI.DetailFragment">
+            tools:context=".ui.DetailFragment">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"

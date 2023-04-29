@@ -1,4 +1,4 @@
-package com.example.movies.UI
+package com.example.movies.ui
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -18,9 +18,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.movies.Adapters.ReviewsAdapter
+import com.example.movies.ui.Adapters.ReviewsAdapter
 import com.example.movies.R
-import com.example.movies.ViewModels.DetailViewModel
+import com.example.movies.viewmodels.DetailViewModel
 import com.example.moviescourse.Model.Movie.Movie
 import com.example.moviescourse.Model.Review.Review
 
@@ -71,7 +71,7 @@ class DetailFragment : Fragment() {
 
         detailViewModel.loadTrailers(movie.id)
 
-        detailViewModel.getTrailers().observe(
+        detailViewModel.trailer.observe(
             viewLifecycleOwner,
             Observer {
                 val trailer = it
@@ -87,7 +87,7 @@ class DetailFragment : Fragment() {
         recyclerViewReviews.layoutManager = reviewsLayoutManager
         recyclerViewReviews.adapter = reviewsAdapter
 
-        detailViewModel.getReviews().observe(
+        detailViewModel.reviews.observe(
             viewLifecycleOwner,
             Observer {
                 reviewsAdapter.setReviews(it)
